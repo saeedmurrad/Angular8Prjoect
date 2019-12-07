@@ -1,10 +1,14 @@
 # Angular8Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20 and maintained by Saeed Murrad.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Fake Server JSON
+
+Run `npm install -g json-server` for a Fake Server JSON Rest API. Run `json-server --watch db.json` to run server locally. Navigate to `http://localhost:3000/` to view Employee data which is persits in `db.json` file.
 
 ## Code scaffolding
 

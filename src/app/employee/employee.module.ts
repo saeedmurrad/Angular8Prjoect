@@ -19,6 +19,7 @@ import { EmployeeRoutingModule } from './employee-routing.module';
 // Import and declare the components that belong to this Employee Module
 import { CreateEmployeeComponent } from './create-employee.component';
 import { ListEmployeesComponent } from './list-employees.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
