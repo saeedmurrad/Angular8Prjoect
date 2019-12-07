@@ -23,14 +23,15 @@ string is passed to the event handler function -->
       <div class="form-group">
         <label class="col-md-2 control-label">Contact Preference</label>
         <div class="col-md-8">
-          <label class="radio-inline">
-            <input type="radio" value="email" formControlName="contactPreference">
-            Email
-          </label>
-          <label class="radio-inline">
-            <input type="radio" value="phone" formControlName="contactPreference">
-            Phone
-          </label>
+            <label class="radio-inline">
+                <p-radioButton value="email" name="contactPreference" formControlName="contactPreference"></p-radioButton>
+                Email
+              </label>
+              <label class="radio-inline">
+                  <p-radioButton value="phone" name="contactPreference" lable="Phone" formControlName="contactPreference"></p-radioButton>
+                Phone
+              </label>
+            
         </div>
       </div>
 
@@ -74,10 +75,8 @@ string is passed to the event handler function -->
       <div class="well">
         <div class="form-group">
           <div class="col-md-offset-2 col-md-4">
-            <button type="button" class="btn btn-primary" (click)="addSkillButtonClick()"
-              [disabled]="employeeForm.get('skills').invalid">
-              Add Skill
-            </button>
+            <button pButton type="button" label="Add Skill" class="ui-button-rounded" (click)="addSkillButtonClick()"
+              [disabled]="employeeForm.get('skills').invalid"></button>
           </div>
         </div>
         <div formArrayName="skills" *ngFor="let skill of employeeForm.get('skills').controls; let i = index">
@@ -126,13 +125,14 @@ string is passed to the event handler function -->
               <label class="col-sm-2 control-label">Proficiency</label>
               <div class="col-sm-8">
                 <label class="radio-inline">
-                  <input type="radio" value="beginner" formControlName="proficiency">Beginner
+                  <p-radioButton value="beginner" [name]="'proficiency'+i" formControlName="proficiency"></p-radioButton>
+                  Beginner
                 </label>
                 <label class="radio-inline">
-                  <input type="radio" value="intermediate" formControlName="proficiency">Intermediate
+                  <p-radioButton value="intermediate" [name]="'proficiency'+i" formControlName="proficiency"></p-radioButton> Intermediate
                 </label>
                 <label class="radio-inline">
-                  <input type="radio" value="advanced" formControlName="proficiency">Advanced
+                  <p-radioButton value="advanced" [name]="'proficiency'+i" formControlName="proficiency"></p-radioButton> Advanced
                 </label>
                 <span class="help-block" *ngIf="skill.get('proficiency').errors?.required &&
                                             skill.get('proficiency').touched">
@@ -147,8 +147,8 @@ string is passed to the event handler function -->
     </div>
     <div class="panel-footer">
       <div class="btn-toolbar">
-        <button class="btn btn-primary" type="submit" [disabled]="employeeForm.invalid">Save</button>
-        <button class="btn btn-primary" type="button" (click)="onLoadDataClick()">Load Data</button>
+        <button pButton label="Save" class="ui-button-rounded" type="submit" [disabled]="employeeForm.invalid"></button>
+        <button pButton label="Load Data" class="ui-button-rounded" type="button" (click)="onLoadDataClick()"></button>
       </div>
     </div>
   </div>

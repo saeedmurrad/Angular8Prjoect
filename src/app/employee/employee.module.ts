@@ -9,6 +9,10 @@ import { CommonModule } from '@angular/common';
 // the ReactiveFormsModule from it, so any other module that needs
 // ReactiveFormsModule can import it from the SharedModule.
 import { ReactiveFormsModule } from '@angular/forms';
+import {TableModule} from 'primeng/table';
+import {ButtonModule} from 'primeng/button';
+import {RadioButton} from 'primeng/radiobutton';
+
 // Import the EmployeeRoutingModule
 import { EmployeeRoutingModule } from './employee-routing.module';
 
@@ -19,10 +23,13 @@ import { ListEmployeesComponent } from './list-employees.component';
 @NgModule({
   imports: [
     CommonModule,
+    ButtonModule,
+    TableModule,
     ReactiveFormsModule,
     EmployeeRoutingModule
   ],
   declarations: [
+    RadioButton,
     CreateEmployeeComponent,
     ListEmployeesComponent
   ],
